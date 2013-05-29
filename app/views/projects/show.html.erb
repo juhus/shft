@@ -1,4 +1,7 @@
-<% if user_signed_in? %>
-	<%= render 'usermenu' %>
-<%end%>
-<%= raw @project.content %>
+<div class="container">
+	<% if user_signed_in? %>
+		<%= render 'usermenu' %>
+	<%end%>
+	<div class="top_margin"></div>
+	<%= raw @project.content %>
+</div>
