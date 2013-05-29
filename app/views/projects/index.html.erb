@@ -1,0 +1,11 @@
+<div id="index">
+	<div class="index_menu">
+		<% @projects.each do |project| %>
+			<div class="menu_item">
+				<%= link_to (image_tag project.icon.url.to_s, class:'thumbnail'), project_url(project) %>
+				<span class="menu_title"><%= project.title %></span>
+			</div>
+		<%end%>
+	</div>
+</div>
+

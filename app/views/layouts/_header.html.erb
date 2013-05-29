@@ -1,0 +1,11 @@
+<div id="header">
+	<% @projects.each do |project| %>
+		<%= link_to (image_tag project.icon.url.to_s, class:'thumbnail'), project_url(project) %>
+	<% end %>
+	<% if user_signed_in? %>
+		<%= link_to (image_tag 'addproject.png', class:'thumbnail'), new_project_url, class:'hidden'%>
+	<% end %>
+</div>
+
+<script type="text/javascript">
+</script>

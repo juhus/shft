@@ -1,0 +1,15 @@
+<%= form_for @project, :html => { :multipart => true } do |f|%>
+	<div class='group'>
+	<%= f.text_field :title, placeholder: 'title', class:'form_title' %>
+	<%= f.text_area :content, placeholder: 'content', class:'form_content', id:'code' %>
+	</div>
+	<div class="group">
+		<% if params[:controller] == 'projects' && params[:action] == 'edit' && @project.icon? %>
+			<%= image_tag @project.icon.url.to_s, class:'form_icon' %><br />
+			<%= f.check_box :remove_icon %> Remove?<br /><br />
+		<%end%>
+		<%= f.file_field :icon %><br /><br />
+		<%= f.submit %>
+	</div>
+<% end %>
+
