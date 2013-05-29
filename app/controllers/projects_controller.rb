@@ -26,6 +26,6 @@ class ProjectsController < ApplicationController
     @project=Project.find(params[:id])
     @project.destroy
     @project=Project.first
-    redirect_to @project
+    redirect_to @projects
   end
 end

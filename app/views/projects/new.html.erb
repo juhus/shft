@@ -1,1 +1,11 @@
-<%= render 'form' %>
+<%= link_to 'Back', @project, class:'back' %>
+<div id="new">
+	<%= render 'form' %>
+</div>
+
+<div id="frame"><span class="title">Preview</span>
+<iframe id="preview">
+</iframe>
+</div>
+
+<%= render 'script'%>

@@ -1,5 +1,7 @@
 <% if user_signed_in? %>
 	<%= link_to (image_tag 'logout.png', class:'thumbnail'), destroy_user_session_url, method: :delete, class:'logout hidden' %>
+<% elsif User.count==0 && params[:controller] == 'projects' && params[:action] == 'index'%>
+	<%= link_to (image_tag 'login.png', class:'thumbnail'), new_user_registration_url, class:'login new' %>	
 <% else %>
 	<%= link_to (image_tag 'login.png', class:'thumbnail'), new_user_session_url, class:'login hidden' %>
 <% end %>

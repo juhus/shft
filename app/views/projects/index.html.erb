@@ -6,6 +6,18 @@
 				<span class="menu_title"><%= project.title %></span>
 			</div>
 		<%end%>
+			<% if user_signed_in? && Project.count == 0 %>	
+				<div class="menu_item">
+					<%= link_to (image_tag 'addproject.png', class:'thumbnail'), new_project_url%>
+				</div>
+			<%end%>
 	</div>
 </div>
 
+<script>
+	var $group = $('.index_menu');
+	var width = $group.width();
+	var item = $group.offset();
+	var left = item.left - width/2;
+	$('.index_menu').offset({left:left});
+</script>
