@@ -25,7 +25,6 @@ class ProjectsController < ApplicationController
   def destroy
     @project=Project.find(params[:id])
     @project.destroy
-    @project=Project.first
-    redirect_to @projects
+    redirect_to root_path
   end
 end
