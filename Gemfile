@@ -5,6 +5,8 @@ gem 'carrierwave'
 gem 'devise'
 gem 'jquery-ui-rails'
 gem 'jquery-rails'
+gem 'aws-sdk'
+gem 'fog'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

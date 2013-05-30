@@ -139,10 +139,19 @@ input[type=email], input[type=password]{
 	}
 	& .menu_title{
 		color: $theme-pale;
-		font-size: 12px;
+		font-size: 10px;
 		display:block;
 		text-align:center;
 		text-shadow: 0 0 2px rgba(0,0,0,0.49);
+	}
+	& .description{
+		width:70%;
+		color:$theme_pale;
+		font-size:10px;
+		text-align:center;
+		
+		margin: 0 auto;
+		padding-top:5%;
 	}
 }
 
@@ -181,7 +190,7 @@ input[type=checkbox],input[type=file]{
 .back{
 	display:block;
 	position: absolute;
-	top: 30px;
+	top: 7px;
 	left: 2%;
 	z-index:9;
 	color: $theme_pale;
