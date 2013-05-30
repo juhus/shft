@@ -11,6 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery.ui.all
+//= require jquery.ui.core
+//= require jquery.ui.draggable
+//= require jquery.ui.accordion
 //= require jquery_ujs
 //= require_tree .
