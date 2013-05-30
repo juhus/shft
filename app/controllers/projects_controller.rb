@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_filter :find_project, only: [:show,:edit,:update,:destroy]
+
   def index
   	@projects=Project.all
   end
@@ -11,20 +13,20 @@ class ProjectsController < ApplicationController
   end
   def show
   	@projects=Project.all
-  	@project = Project.find(params[:id])
   end
   def edit
 	  @projects=Project.all
-  	@project = Project.find(params[:id])
   end
   def update
-    @project=Project.find(params[:id])
     @project.update_attributes(params[:project])
     redirect_to @project
   end
   def destroy
-    @project=Project.find(params[:id])
     @project.destroy
     redirect_to root_path
   end
+  private
+    def find_project
+      @project =Project.find_by_slug!(params[:id])
+    end
 end

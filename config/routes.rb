@@ -1,8 +1,9 @@
 Shft::Application.routes.draw do
+  root :to => 'projects#index'
   devise_for :users
-
-  resources :projects
-    root :to => 'projects#index'
+  resources :projects, only: [:index, :new, :create]
+  resources :projects, path: "", except: [:index,:new,:create]
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
